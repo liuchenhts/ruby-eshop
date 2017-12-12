@@ -1,2 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
 
-<h1>Hello, Rails!</h1>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= link_to product.name, product_path(product) %></td>
+      <td><%= product.price %></td>
+      <td><%= link_to 'update', edit_product_path(product) %></td>
+      <td><%= link_to 'Delete Product', product_path(product),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
