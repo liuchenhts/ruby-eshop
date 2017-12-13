@@ -1,18 +1,7 @@
-
-<p>
-  <strong>ID:</strong>
-  <%= @product.id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-
+<ul>
+    <li><%= @product.id %></li>
+    <li><%= @product.name %></li>
+    <li><%= @product.price %></li>
+    <li><%= @product.created_at %></li>
+</ul>
 <%= link_to 'Back', products_path %>
