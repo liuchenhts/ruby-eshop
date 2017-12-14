@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   # get
   def index
-    @products = Product.all
+    @products = Product.order(created_at: :desc).limit(50)
   end
 
   # get, read
